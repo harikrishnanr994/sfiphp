@@ -59,6 +59,17 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="col-xs-12">Gender</label>
+                            <div class="col-xs-12">
+                                <label class="radio-inline" for="gender">
+                                    <input type="radio" id="gender-male" name="gender" value="male"> Male
+                                </label>
+                                <label class="radio-inline" for="gender">
+                                    <input type="radio" id="gender-female" name="gender" value="female"> Female
+                                </label>
+                            </div>
+                        </div>
                         <div class="form-group push-30-t">
                             <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
                                 <button class="btn btn-sm btn-block btn-primary" type="submit">Register</button>
