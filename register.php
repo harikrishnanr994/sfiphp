@@ -3,7 +3,7 @@
 <?php require 'inc/views/template_head_end.php'; ?>
 
 <!-- Login Content -->
-<div class="bg-white">
+<div class="bg-white push-30">
     <div class="content content-boxed overflow-hidden">
         <div class="row">
             <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
@@ -69,16 +69,14 @@
                 </div>
             </div>
         </div>
-        <div class="text-center animated fadeInUp">
-            <small class="text-muted"><span class="js-year-copy"></span> &copy; <?php echo $one->name . ' ' . $one->version; ?></small>
-        </div>
     </div>
-<br><br>
 </div>
 <!-- END Login Content -->
 
 <!-- Login Footer -->
-
+<div class="push-30 text-center animated fadeInUp">
+    <small class="text-muted"><span class="js-year-copy"></span> &copy; <?php echo $one->name . ' ' . $one->version; ?></small>
+</div>
 <!-- END Login Footer -->
 
 <?php require 'inc/views/template_footer_start.php'; ?>
