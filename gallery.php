@@ -1,6 +1,5 @@
 <?php require 'inc/config.php'; require 'inc/frontend_config.php'; require 'inc/db_config.php';
-$page_t = "services";
-$sub_page = "library";
+$page_t = "gallery";
 mysqli_set_charset($mysqli, 'utf8');
 
 $page = isset($_GET['page']) && $_GET['page'] >= 1 ? (int)$_GET['page'] : 1;

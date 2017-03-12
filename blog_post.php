@@ -1,8 +1,16 @@
 <?php require 'inc/config.php'; require 'inc/frontend_config.php'; require 'inc/db_config.php';
 $page_t = "blog";
 mysqli_set_charset($mysqli, 'utf8');
-$user = 1;
-$action = "insert";
+$action = "insert";?>
+<?php require 'inc/views/template_head_start.php'; ?>
+<?php require 'inc/views/template_head_end.php'; ?>
+<?php require 'inc/views/frontend_head.php'; ?>
+<?php
+if(isset($_SESSION['user'])){
+  $user_id = $_SESSION['user_id'];
+} else {
+  echo "<script>window.open('login.php','_self')</script>";
+}
 ?>
 <!-- Page JS Plugins CSS -->
 <link rel="stylesheet" href="<?php echo $one->assets_folder; ?>/js/plugins/summernote/summernote.min.css">
@@ -15,10 +23,6 @@ $one->inc_header                = 'frontend_header_navigation.php';
 $one->l_sidebar_mini            = false;
 $one->l_sidebar_visible_desktop = false;
 ?>
-<?php require 'inc/views/template_head_start.php'; ?>
-<?php require 'inc/views/template_head_end.php'; ?>
-<?php require 'inc/views/frontend_head.php'; ?>
-
 <div class="bg-primary-dark" style="height:60px">
 </div>
 
@@ -53,7 +57,7 @@ $one->l_sidebar_visible_desktop = false;
                   <textarea class="js-summernote" name="content" id="tex">Hello Comrade!</textarea>
                 </div>
             </div>
-            <input type="hidden" value="<?=$user?>" name="author">
+            <input type="hidden" value="<?=$user_id?>" name="author">
             <button type="button" class="btn btn-default" id="btn_">View changes</button>
             <? if($action != "update") echo '<button type="submit" name="submit" class="btn btn-primary" id="btn_">Save changes</button>';
               else echo '<button type="update" name="update" class="btn btn-primary" id="btn_">Update changes</button>'; ?>

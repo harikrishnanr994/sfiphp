@@ -1,6 +1,11 @@
 <?php require 'inc/config.php'; ?>
 <?php require 'inc/views/template_head_start.php'; ?>
-<?php require 'inc/views/template_head_end.php'; ?>
+<?php require 'inc/views/template_head_end.php';
+if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+  $_SESSION['msg'] = "Already logged in!";
+  header("location: index.php");
+}
+?>
 
 <!-- Login Content -->
 <div class="bg-white pulldown">
@@ -18,11 +23,22 @@
                     <!-- Login Form -->
                     <!-- jQuery Validation (.js-validation-login class is initialized in js/pages/base_pages_login.js) -->
                     <!-- For more examples you can check out https://github.com/jzaefferer/jquery-validation -->
-                    <form class="js-validation-login form-horizontal push-30-t" action="base_pages_dashboard.php" method="post">
+                    <form class="js-validation-login form-horizontal push-30-t" action="./" method="post">
+                      <div class="form-group">
+                          <div class="col-xs-12">
+                              <div class="form-material form-material-primary floating">
+                                  <div class="alert alert-danger alert-dismissable fade in" id="add_err">
+                                      <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                                      Wrong username or password !
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <div class="form-material form-material-primary floating">
-                                    <input class="form-control" type="text" id="login-username" name="login-username">
+                                    <input class="form-control" type="text" id="username" name="username" required>
                                     <label for="login-username">Username</label>
                                 </div>
                             </div>
@@ -30,7 +46,7 @@
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <div class="form-material form-material-primary floating">
-                                    <input class="form-control" type="password" id="login-password" name="login-password">
+                                    <input class="form-control" type="password" id="password" name="password" required>
                                     <label for="login-password">Password</label>
                                 </div>
                             </div>
@@ -38,7 +54,7 @@
                         <div class="form-group">
                             <div class="col-xs-6">
                                 <label class="css-input switch switch-sm switch-primary">
-                                    <input type="checkbox" id="login-remember-me" name="login-remember-me"><span></span> Remember Me?
+                                    <input type="checkbox" id="remember" name="remember" value="yes"><span></span> Remember Me?
                                 </label>
                             </div>
                             <div class="col-xs-6">
@@ -49,7 +65,7 @@
                         </div>
                         <div class="form-group push-30-t">
                             <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-                                <button class="btn btn-sm btn-block btn-primary" type="submit">Log in</button>
+                                <button class="btn btn-sm btn-block btn-primary" type="submit" id="login">Log in</button>
                             </div>
                         </div>
                     </form>
@@ -68,6 +84,37 @@
 <!-- END Login Footer -->
 
 <?php require 'inc/views/template_footer_start.php'; ?>
+
+<script>
+$(document).ready(function(){
+  $("#add_err").css('display', 'none', 'important');
+   $("#login").click(function(){
+      username=$("#username").val();
+      password=$("#password").val();
+      remember=$("#remember").val();
+      $.ajax({
+       type: "POST",
+       url: "action_login.php",
+      data: "username="+username+"&password="+password+"&remember="+remember,
+       success: function(html){
+      if(html=='true')    {
+       //$("#add_err").html("right username or password");
+       window.location="index.php";
+      }
+      else    {
+        $("#loader").replaceWith("<button class='btn btn-sm btn-block btn-primary' type='submit' id='login'>Log in</button>");
+        $("#add_err").css('display', 'inline', 'important');
+      }
+       },
+       beforeSend:function()
+       {
+      $("#login").replaceWith("<img id='loader' style='height:50px' src='assets/img/loading.gif'>");
+       }
+      });
+    return false;
+  });
+});
+</script>
 
 <!-- Page JS Plugins -->
 <script src="<?php echo $one->assets_folder; ?>/js/plugins/jquery-validation/jquery.validate.min.js"></script>
