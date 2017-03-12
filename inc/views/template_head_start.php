@@ -7,6 +7,16 @@
  * The first block of code used in every page of the template
  *
  */
+ session_start();
+ if(basename($_SERVER['PHP_SELF']) != "login.php") {
+   if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+     $user = $_SESSION['user'];
+
+   } else {
+     echo "<script>window.open('login.php','_self')</script>";
+   }
+ }
+
 ?>
 <!DOCTYPE html>
 <!--[if IE 9]>         <html class="ie9 no-focus" lang="en"> <![endif]-->
