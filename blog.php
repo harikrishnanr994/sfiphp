@@ -5,8 +5,8 @@ mysqli_set_charset($mysqli, 'utf8');
 $page = isset($_GET['page']) && $_GET['page'] >= 1 ? (int)$_GET['page'] : 1;
 $perPage = isset($_GET['per-page']) && $_GET['per-page'] <= 50 ? (int)$_GET['per-page'] : 9;
 $start = ($page > 1) ? ($page * $perPage) - $perPage : 0;
-$sql = 'SELECT * FROM blog_posts where post_id < 68 ORDER BY post_id  LIMIT '.$start.','.$perPage;
-$total_sql = mysqli_query($mysqli, "Select * from blog_posts where post_id < 68"); // Query the posts table
+$sql = 'SELECT * FROM blog_posts where post_id < 68 ORDER BY post_id DESC  LIMIT '.$start.','.$perPage;
+$total_sql = mysqli_query($mysqli, "Select * from blog_posts where post_id < 68 ORDER BY post_id DESC"); // Query the posts table
 $total = mysqli_num_rows($total_sql);
 $pages = ceil($total / $perPage);
 ?>
@@ -22,7 +22,10 @@ $one->l_side_scroll             = true;
 <?php require 'inc/views/template_head_start.php'; ?>
 <?php require 'inc/views/template_head_end.php'; ?>
 <?php require 'inc/views/frontend_head.php'; ?>
-
+<style>
+.grid-item { width: 350px; }
+</style>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <!-- Hero Content -->
 <div class="bg-image" style="background-image: url('<?php echo $one->assets_folder; ?>/img/blog/photo24@2x.jpg');">
     <div class="bg-primary-dark-op">
@@ -42,7 +45,7 @@ $one->l_side_scroll             = true;
 <section class="content content-boxed">
     <!-- Section Content -->
     <div class="push-50-t push-50">
-        <div class="row">
+        <div class="row grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 350 }'>
           <?php
             try {
               $query = mysqli_query($mysqli, $sql);
@@ -54,9 +57,9 @@ $one->l_side_scroll             = true;
                 } catch (Exception $e) {}
                 echo '
                 <!-- Story -->
-                <div class="col-md-4 visibility-hidden" data-toggle="appear" data-offset="50" data-class="animated fadeIn">
+                <div class="col-md-4 visibility-hidden grid-item" data-toggle="appear" data-offset="50" data-class="animated fadeIn">
                     <a class="block block-link-hover2" href="blog_story.php?id='.$row['post_id'].'">
-                        <img class="img-responsive" src="'.$one->assets_folder.'/img/blog/'.$row['blog_head_image'].'">
+                        <img style="height: 100%; width: 100%; object-fit: contain;" class="img-responsive" src="'.$one->assets_folder.'/img/blog/'.$row['blog_head_image'].'">
                         <div class="block-content">
                             <div class="font-s12 push">
                                 <span class="text-primary">'.$user.'</span> on '.$row['post_date'].'

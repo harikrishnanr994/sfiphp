@@ -7,7 +7,7 @@
       $uid=$row['post_id'];
       $uid++;
     	  $post_title = $_POST['title'];
-    	  $post_date = date('m-d-y');
+    	  $post_date = date("jS F Y h:i A");
     	  $post_author = (int)$_POST['author'];
         $post_desc = $_POST['post_desc'];
     	  $post_content = $_POST['content'];

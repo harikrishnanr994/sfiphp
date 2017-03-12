@@ -22,7 +22,10 @@ $one->l_side_scroll             = true;
 <?php require 'inc/views/template_head_start.php'; ?>
 <?php require 'inc/views/template_head_end.php'; ?>
 <?php require 'inc/views/frontend_head.php'; ?>
-
+<style>
+.grid-item { width: 350px; }
+</style>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <link rel="stylesheet" href="<?php echo $one->assets_folder; ?>/js/plugins/magnific-popup/magnific-popup.min.css">
 <!-- Page Header -->
 <div class="bg-image" style="background-image: url('<?php echo $one->assets_folder; ?>/img/blog/photo24@2x.jpg');">
@@ -42,7 +45,7 @@ $one->l_side_scroll             = true;
 <!-- Page Content -->
 <div class="content">
     <!-- Gallery (.js-gallery-advanced class is initialized in App() -> uiHelperMagnific()) -->
-    <!-- For more info and examples you can check out http://dimsemenov.com/plugins/magnific-popup/ -->
+    <!-- For more info and examples you can check out http://dimsemenov.com/plugins/magnific-popup/
 
     <div class="col-xs-12">
       <div class="pager">
@@ -55,24 +58,17 @@ $one->l_side_scroll             = true;
         </ul>
       </div>
     </div>
-
-    <div class="row items-push js-gallery-advanced">
-      <?php
-        try {
-
-          $query = mysqli_query($mysqli, $sql);
-          while($row = mysqli_fetch_array($query)) {
-            $book_img = (!empty($row['book_image']))?$row['book_image']:'ecom_product2.png';
-            echo '
-
-            <div class="col-sm-6 col-md-4 col-lg-3 animated fadeIn">
+-->
+    <div class="row items-push js-gallery-advanced grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 350 }'>
+      <?php for($i=1;$i<23;$i++) { ?>
+            <div class="col-sm-6 col-md-4 col-lg-3 animated fadeIn grid-item">
                 <div class="img-container fx-img-rotate-r">
-                  <img class="img-responsive" src="'.$one->assets_folder.'/img/books/'.$book_img.'" alt="">
+                  <img class="img-responsive" src="<? echo $one->assets_folder;?>/img/photos/sfi_nssce_img_<?=$i;?>.jpg" alt="">
                     <div class="img-options">
                         <div class="img-options-content">
                             <h3 class="font-w400 text-white push-5">Image Caption</h3>
                             <h4 class="h6 font-w400 text-white-op push-15">Some Extra Info</h4>
-                            <a class="btn btn-sm btn-default img-lightbox" href="'.$one->assets_folder.'/img/books/'.$book_img.'">
+                            <a class="btn btn-sm btn-default img-lightbox" href="<? echo $one->assets_folder;?>/img/photos/sfi_nssce_img_<?=$i;?>.jpg">
                                 <i class="fa fa-search-plus"></i> View
                             </a>
                             <div class="btn-group btn-group-sm">
@@ -82,14 +78,12 @@ $one->l_side_scroll             = true;
                         </div>
                     </div>
                 </div>
-            </div>';
-          }
-        } catch(PDOException $e) {
-          echo $e->getMessage();
+            </div>
+            <?
         }
       ?>
     </div>
-    <!-- END Gallery -->
+    <!-- END Gallery
     <div class="col-xs-12">
       <div class="pager">
         <ul class="pagination style2">
@@ -100,7 +94,7 @@ $one->l_side_scroll             = true;
           <li <?=($page==$pages) ? 'class="disabled"':''; ?>><a href="?page=<?=($page+1);?>&per-page=<?=$perPage;?>"><i class="fa fa-chevron-right"></i></a></li>
         </ul>
       </div>
-    </div>
+    </div>-->
 </div>
 <!-- END Page Content -->
 

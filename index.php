@@ -20,8 +20,8 @@ $one->l_side_scroll             = true;
             <!-- Section Content -->
             <div class="push-100-t push-50 text-center">
                 <h1 class="h2 text-white push-10 visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">" സ്വാതന്ത്ര്യം, ജനാധിപത്യം, സോഷ്യലിസം "</h1>
-                <h2 class="h5 text-white-op push-50 visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">ചിന്തിക്കുന്ന വിദ്യാർത്ഥികളുടെ ഒരു ചെറിയ സംഘം ഇങ്ങനെ പ്രഖ്യാപിച്ചു....</h2>
-                <a class="btn btn-rounded btn-noborder btn-lg btn-primary visibility-hidden" data-toggle="appear" data-class="animated bounceIn" data-timeout="800" href="">അണി ചേരുക</a>
+                <h2 class="h5 text-white-op push-50 visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">പഠിക്കുക പോരാടുക വിപ്ലവകാരിയായ വിദ്യാർത്ഥിയാവുക</h2>
+                <a class="btn btn-rounded btn-noborder btn-lg btn-primary visibility-hidden" data-toggle="appear" data-class="animated bounceIn" data-timeout="800" href="">SFI-ൽ അണി ചേരൂ...</a>
             </div>
             <div class="row visibility-hidden" data-toggle="appear" data-class="animated fadeInUp">
                 <div class="col-sm-8 col-sm-offset-2">
@@ -60,7 +60,7 @@ $one->l_side_scroll             = true;
 <div class="bg-white">
     <section class="content content-boxed">
         <!-- Section Content -->
-        <div class="row items-push-3x push-50-t nice-copy">
+        <div class="row items-push-3x nice-copy">
             <div class="col-sm-4">
                 <div class="text-center push-30">
                     <span class="item item-2x item-circle border">
@@ -68,7 +68,17 @@ $one->l_side_scroll             = true;
                     </span>
                 </div>
                 <h3 class="h5 font-w600 text-uppercase text-center push-10">Library</h3>
-                <p class="justify" style="text-align:justify">"വായിക്കുക വിപ്ലവകാരിയായ വിദ്യാർത്ഥിയാവുക" എന്ന മുദ്രാവാക്യമുയർത്തിപ്പിടിച്ച് SFl ആരംഭിച്ച ഡിജിറ്റൽ സാഹിത്യ ലൈബ്രറി എഞ്ചിനീയറിംഗ് വിദ്യാഭ്യാസത്തിന്റെ തിരക്കുകൾക്കിടയിലും വിദ്യാർത്ഥികൾക്ക് ലോകസാഹിത്യത്തോട് സംവധിക്കാനും അതുവഴി അറിവിന്റെ വിശാലാർത്ഥങ്ങൾ അന്വേഷിക്കാനുമുള്ള ഒരു കവാടമാണ്.</p>
+                <p class="justify" style="text-align:justify">"വായിക്കുക വിപ്ലവകാരിയായ വിദ്യാർത്ഥിയാവുക" എന്ന മുദ്രാവാക്യമുയർത്തിപ്പിടിച്ച് SFI ആരംഭിച്ച ഡിജിറ്റൽ സാഹിത്യ ലൈബ്രറി എഞ്ചിനീയറിംഗ് വിദ്യാഭ്യാസത്തിന്റെ തിരക്കുകൾക്കിടയിലും വിദ്യാർത്ഥികൾക്ക് ലോകസാഹിത്യത്തോട് സംവധിക്കാനും അതുവഴി അറിവിന്റെ വിശാലാർത്ഥങ്ങൾ അന്വേഷിക്കാനുമുള്ള ഒരു കവാടമാണ്.</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="text-center push">
+                    <span class="item item-2x item-circle border">
+                        <i class="si si-drop text-smooth"></i>
+                    </span>
+                </div>
+                <h3 class="h5 font-w600 text-uppercase text-center push-10">Gallery</h3>
+                <p class="justify" style="text-align:justify">SFI NSSCE യുടെ പോരാട്ടച്ചരിത്രത്തിന്‍റെ നേര്‍സാക്ഷ്യങ്ങള്‍.</p>
+
             </div>
             <div class="col-sm-4">
                 <div class="text-center push">
@@ -77,7 +87,30 @@ $one->l_side_scroll             = true;
                     </span>
                 </div>
                 <h3 class="h5 font-w600 text-uppercase text-center push-10">News</h3>
-                <p class="justify" style="text-align:justify">"വായിക്കുക വിപ്ലവകാരിയായ വിദ്യാർത്ഥിയാവുക" എന്ന മുദ്രാവാക്യമുയർത്തിപ്പിടിച്ച് SFl ആരംഭിച്ച ഡിജിറ്റൽ സാഹിത്യ ലൈബ്രറി എഞ്ചിനീയറിംഗ് വിദ്യാഭ്യാസത്തിന്റെ തിരക്കുകൾക്കിടയിലും വിദ്യാർത്ഥികൾക്ക് ലോകസാഹിത്യത്തോട് സംവധിക്കാനും അതുവഴി അറിവിന്റെ വിശാലാർത്ഥങ്ങൾ അന്വേഷിക്കാനുമുള്ള ഒരു കവാടമാണ്.</p>
+                <p class="justify" style="text-align:justify">കലാലയത്തിനകത്തും സാര്‍വദേശവ്യാപകമായും നടക്കുന്ന വിദ്യര്‍ത്ഥിപ്രശ്നങ്ങളെയും അവകാശപ്പോരാട്ടങ്ങളെയും വിദ്യാര്‍ത്ഥിസമൂഹത്തിനു പരിചയപ്പെടുത്തിക്കൊടുക്കാന്‍ ഉള്ള അറിവിന്‍റെ ജാലകങ്ങള്‍.</p>
+
+            </div>
+
+        </div>
+        <div class="row items-push-3x nice-copy">
+            <div class="col-sm-4">
+                <div class="text-center push-30">
+                    <span class="item item-2x item-circle border">
+                        <i class="si si-book-open text-smooth"></i>
+                    </span>
+                </div>
+                <h3 class="h5 font-w600 text-uppercase text-center push-10">Forum</h3>
+                <p class="justify" style="text-align:justify">"നിക്ഷ്പക്ഷത ഭീരുവിന്‍റെ മുഖപടമാണ്"
+തനിക്കു ചുറ്റും നടക്കുന്ന കാഴ്ചകളില്‍ വ്യക്തിപരമായും വ്യക്തമായ പക്ഷംചേര്‍ന്നും അഭിപ്രായങ്ങള്‍ പ്രകടിപ്പിക്കാന്‍ ഉള്ള സ്വതന്ത്രവേദിയാണ് ഈ ഫോറം.</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="text-center push">
+                    <span class="item item-2x item-circle border">
+                        <i class="si si-speech text-smooth"></i>
+                    </span>
+                </div>
+                <h3 class="h5 font-w600 text-uppercase text-center push-10">Blog</h3>
+                <p class="justify" style="text-align:justify">കഴിഞ്ഞകാലത്തെ കുറിച്ചുവെക്കാന്‍ കാലമോര്‍ക്കേണ്ടവ എഴുതിവെക്കാന്‍ വരുംകാലകനവിനെ പങ്കുവെക്കാന്‍ ഒരിടം.</p>
 
             </div>
             <div class="col-sm-4">
@@ -87,38 +120,9 @@ $one->l_side_scroll             = true;
                     </span>
                 </div>
                 <h3 class="h5 font-w600 text-uppercase text-center push-10">Blood Bank</h3>
-                <p class="justify" style="text-align:justify">"വായിക്കുക വിപ്ലവകാരിയായ വിദ്യാർത്ഥിയാവുക" എന്ന മുദ്രാവാക്യമുയർത്തിപ്പിടിച്ച് SFl ആരംഭിച്ച ഡിജിറ്റൽ സാഹിത്യ ലൈബ്രറി എഞ്ചിനീയറിംഗ് വിദ്യാഭ്യാസത്തിന്റെ തിരക്കുകൾക്കിടയിലും വിദ്യാർത്ഥികൾക്ക് ലോകസാഹിത്യത്തോട് സംവധിക്കാനും അതുവഴി അറിവിന്റെ വിശാലാർത്ഥങ്ങൾ അന്വേഷിക്കാനുമുള്ള ഒരു കവാടമാണ്.</p>
-
-            </div>
-        </div>
-        <div class="row items-push-3x push-50-t nice-copy">
-            <div class="col-sm-4">
-                <div class="text-center push-30">
-                    <span class="item item-2x item-circle border">
-                        <i class="si si-book-open text-smooth"></i>
-                    </span>
-                </div>
-                <h3 class="h5 font-w600 text-uppercase text-center push-10">Forum</h3>
-                <p class="justify" style="text-align:justify">"വായിക്കുക വിപ്ലവകാരിയായ വിദ്യാർത്ഥിയാവുക" എന്ന മുദ്രാവാക്യമുയർത്തിപ്പിടിച്ച് SFl ആരംഭിച്ച ഡിജിറ്റൽ സാഹിത്യ ലൈബ്രറി എഞ്ചിനീയറിംഗ് വിദ്യാഭ്യാസത്തിന്റെ തിരക്കുകൾക്കിടയിലും വിദ്യാർത്ഥികൾക്ക് ലോകസാഹിത്യത്തോട് സംവധിക്കാനും അതുവഴി അറിവിന്റെ വിശാലാർത്ഥങ്ങൾ അന്വേഷിക്കാനുമുള്ള ഒരു കവാടമാണ്.</p>
-            </div>
-            <div class="col-sm-4">
-                <div class="text-center push">
-                    <span class="item item-2x item-circle border">
-                        <i class="si si-speech text-smooth"></i>
-                    </span>
-                </div>
-                <h3 class="h5 font-w600 text-uppercase text-center push-10">Blog</h3>
-                <p class="justify" style="text-align:justify">"വായിക്കുക വിപ്ലവകാരിയായ വിദ്യാർത്ഥിയാവുക" എന്ന മുദ്രാവാക്യമുയർത്തിപ്പിടിച്ച് SFl ആരംഭിച്ച ഡിജിറ്റൽ സാഹിത്യ ലൈബ്രറി എഞ്ചിനീയറിംഗ് വിദ്യാഭ്യാസത്തിന്റെ തിരക്കുകൾക്കിടയിലും വിദ്യാർത്ഥികൾക്ക് ലോകസാഹിത്യത്തോട് സംവധിക്കാനും അതുവഴി അറിവിന്റെ വിശാലാർത്ഥങ്ങൾ അന്വേഷിക്കാനുമുള്ള ഒരു കവാടമാണ്.</p>
-
-            </div>
-            <div class="col-sm-4">
-                <div class="text-center push">
-                    <span class="item item-2x item-circle border">
-                        <i class="si si-drop text-smooth"></i>
-                    </span>
-                </div>
-                <h3 class="h5 font-w600 text-uppercase text-center push-10">Gallery</h3>
-                <p class="justify" style="text-align:justify">"വായിക്കുക വിപ്ലവകാരിയായ വിദ്യാർത്ഥിയാവുക" എന്ന മുദ്രാവാക്യമുയർത്തിപ്പിടിച്ച് SFl ആരംഭിച്ച ഡിജിറ്റൽ സാഹിത്യ ലൈബ്രറി എഞ്ചിനീയറിംഗ് വിദ്യാഭ്യാസത്തിന്റെ തിരക്കുകൾക്കിടയിലും വിദ്യാർത്ഥികൾക്ക് ലോകസാഹിത്യത്തോട് സംവധിക്കാനും അതുവഴി അറിവിന്റെ വിശാലാർത്ഥങ്ങൾ അന്വേഷിക്കാനുമുള്ള ഒരു കവാടമാണ്.</p>
+                <p class="justify" style="text-align:justify">ഓരോ ശ്വാസവും ഒരുനൂറു ജീവിതങ്ങല്‍ക്കായി മാറ്റിവെക്കുക
+ഓരോ തുള്ളി രക്തവും ഒരായിരം ജീവിതങ്ങല്‍ക്കായി പങ്കുവെക്കുക
+"രക്തദാനം ജീവദാനം"</p>
 
             </div>
         </div>
