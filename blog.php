@@ -86,20 +86,21 @@ $one->l_side_scroll             = true;
     <!-- END Section Content -->
 </section>
 <!-- END Grid Content -->
-
-<!-- Get Started -->
-<div class="bg-primary-dark">
-    <section class="content content-full content-boxed">
-        <!-- Section Content -->
-        <div class="push-20-t push-20 text-center">
-            <h3 class="h4 text-white-op push-20 visibility-hidden" data-toggle="appear">Do you have stories to say ? Sign up today and get started to write one!</h3>
-            <a class="btn btn-rounded btn-noborder btn-lg btn-success visibility-hidden" data-toggle="appear" data-class="animated bounceIn" href="blog_post.php">Write Post</a>
-        </div>
-        <!-- END Section Content -->
-    </section>
-</div>
-<!-- END Get Started -->
-
+<?php if($_SESSION['admin']) {
+  echo '<!-- Get Started -->
+  <div class="bg-primary-dark">
+      <section class="content content-full content-boxed">
+          <!-- Section Content -->
+          <div class="push-20-t push-20 text-center">
+              <h3 class="h4 text-white-op push-20 visibility-hidden" data-toggle="appear">Do you have stories to say ? Sign up today and get started to write one!</h3>
+              <a class="btn btn-rounded btn-noborder btn-lg btn-success visibility-hidden" data-toggle="appear" data-class="animated bounceIn" href="blog_post.php">Write Post</a>
+          </div>
+          <!-- END Section Content -->
+      </section>
+  </div>
+  <!-- END Get Started -->';
+}
+?>
 <?php require 'inc/views/frontend_footer.php'; ?>
 <?php require 'inc/views/template_footer_start.php'; ?>
 

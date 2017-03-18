@@ -1,5 +1,4 @@
 <?php require 'inc/config.php'; require 'inc/frontend_config.php'; require 'inc/db_config.php';
-session_start();
 mysqli_set_charset($mysqli, 'utf8');
 $book_id = $_GET['id'];
 $book_sql = mysqli_query($mysqli, "select * from books where book_id = '$book_id'");

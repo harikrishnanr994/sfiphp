@@ -6,10 +6,10 @@ $action = "insert";?>
 <?php require 'inc/views/template_head_end.php'; ?>
 <?php require 'inc/views/frontend_head.php'; ?>
 <?php
-if(isset($_SESSION['user'])){
+if(isset($_SESSION['admin']) && $_SESSION['admin']){
   $user_id = $_SESSION['user_id'];
 } else {
-  echo "<script>window.open('login.php','_self')</script>";
+  echo "<script>window.open('index.php','_self')</script>";
 }
 ?>
 <!-- Page JS Plugins CSS -->

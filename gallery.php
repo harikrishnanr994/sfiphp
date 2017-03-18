@@ -66,15 +66,16 @@ $one->l_side_scroll             = true;
                   <img class="img-responsive" src="<? echo $one->assets_folder;?>/img/photos/sfi_nssce_img_<?=$i;?>.jpg" alt="">
                     <div class="img-options">
                         <div class="img-options-content">
-                            <h3 class="font-w400 text-white push-5">Image Caption</h3>
-                            <h4 class="h6 font-w400 text-white-op push-15">Some Extra Info</h4>
                             <a class="btn btn-sm btn-default img-lightbox" href="<? echo $one->assets_folder;?>/img/photos/sfi_nssce_img_<?=$i;?>.jpg">
                                 <i class="fa fa-search-plus"></i> View
                             </a>
-                            <div class="btn-group btn-group-sm">
-                                <a class="btn btn-default" href="javascript:void(0)"><i class="fa fa-pencil"></i> Edit</a>
-                                <a class="btn btn-default" href="javascript:void(0)"><i class="fa fa-times"></i> Delete</a>
-                            </div>
+                            <?php if($_SESSION['admin']) {
+                              echo '<div class="btn-group btn-group-sm">
+                                  <a class="btn btn-default" href="javascript:void(0)"><i class="fa fa-pencil"></i> Edit</a>
+                                  <a class="btn btn-default" href="javascript:void(0)"><i class="fa fa-times"></i> Delete</a>
+                              </div>';
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>

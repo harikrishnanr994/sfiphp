@@ -1,5 +1,4 @@
 <?php require 'inc/config.php'; require 'inc/frontend_config.php'; require 'inc/db_config.php';
-session_start();
 $page_t = "blog";
 mysqli_set_charset($mysqli, 'utf8');
 $post_id = $_GET['id'];
@@ -64,92 +63,21 @@ $one->l_sidebar_visible_desktop = false;
     </section>
 </div>
 <!-- END Story Content -->
-<!-- Get Started -->
-<div class="bg-primary-dark">
-    <section class="content content-full content-boxed">
-        <!-- Section Content -->
-        <div class="push-20-t push-20 text-center">
-            <h3 class="h4 text-white-op push-20 visibility-hidden" data-toggle="appear">Do you have stories to say ? Sign up today and get started to write one!</h3>
-            <a class="btn btn-rounded btn-noborder btn-lg btn-success visibility-hidden" data-toggle="appear" data-class="animated bounceIn" href="blog_post.php">Write Post</a>
-        </div>
-        <!-- END Section Content -->
-    </section>
-</div>
-<!-- END Get Started -->
-<!-- More Stories -->
-<section class="content content-boxed">
-    <!-- Section Content -->
-    <div class="row push-30-t push-30">
-        <div class="col-sm-4">
-            <a class="block block-link-hover2" href="javascript:void(0)">
-                <div class="block-content bg-image" style="background-image: url('<?php echo $one->assets_folder; ?>/img/photos/photo2.jpg');">
-                    <h4 class="text-white push-50-t push">10 Productivity Tips</h4>
-                </div>
-                <div class="block-content block-content-full font-s12">
-                    <em class="pull-right">12 min</em>
-                    <span class="text-primary"><?php $one->get_name(); ?></span> on July 2, 2015
-                </div>
-            </a>
-        </div>
-        <div class="col-sm-4">
-            <a class="block block-link-hover2" href="javascript:void(0)">
-                <div class="block-content bg-image" style="background-image: url('<?php echo $one->assets_folder; ?>/img/photos/photo10.jpg');">
-                    <h4 class="text-white push-50-t push">Travel &amp; Work</h4>
-                </div>
-                <div class="block-content block-content-full font-s12">
-                    <em class="pull-right">15 min</em>
-                    <span class="text-primary"><?php $one->get_name(); ?></span> on July 6, 2015
-                </div>
-            </a>
-        </div>
-        <div class="col-sm-4">
-            <a class="block block-link-hover2" href="javascript:void(0)">
-                <div class="block-content bg-image" style="background-image: url('<?php echo $one->assets_folder; ?>/img/photos/photo3.jpg');">
-                    <h4 class="text-white push-50-t push">New Image Gallery</h4>
-                </div>
-                <div class="block-content block-content-full font-s13">
-                    <em class="pull-right">10 min</em>
-                    <span class="text-primary"><?php $one->get_name(); ?></span> on June 29, 2015
-                </div>
-            </a>
-        </div>
-        <div class="col-sm-4">
-            <a class="block block-link-hover2" href="javascript:void(0)">
-                <div class="block-content bg-image" style="background-image: url('<?php echo $one->assets_folder; ?>/img/photos/photo23.jpg');">
-                    <h4 class="text-white push-50-t push">Explore the World</h4>
-                </div>
-                <div class="block-content block-content-full font-s12">
-                    <em class="pull-right">13 min</em>
-                    <span class="text-primary"><?php $one->get_name(); ?></span> on June 16, 2015
-                </div>
-            </a>
-        </div>
-        <div class="col-sm-4">
-            <a class="block block-link-hover2" href="javascript:void(0)">
-                <div class="block-content bg-image" style="background-image: url('<?php echo $one->assets_folder; ?>/img/photos/photo22.jpg');">
-                    <h4 class="text-white push-50-t push">Follow Your Dreams</h4>
-                </div>
-                <div class="block-content block-content-full font-s12">
-                    <em class="pull-right">10 min</em>
-                    <span class="text-primary"><?php $one->get_name(); ?></span> on May 23, 2015
-                </div>
-            </a>
-        </div>
-        <div class="col-sm-4">
-            <a class="block block-link-hover2" href="javascript:void(0)">
-                <div class="block-content bg-image" style="background-image: url('<?php echo $one->assets_folder; ?>/img/photos/photo24.jpg');">
-                    <h4 class="text-white push-50-t push">Top 10 Destinations</h4>
-                </div>
-                <div class="block-content block-content-full font-s12">
-                    <em class="pull-right">7 min</em>
-                    <span class="text-primary"><?php $one->get_name(); ?></span> on May 15, 2015
-                </div>
-            </a>
-        </div>
-    </div>
-    <!-- END Section Content -->
-</section>
-<!-- END More Stories -->
+<?php if($_SESSION['admin']) {
+  echo '<!-- Get Started -->
+  <div class="bg-primary-dark">
+      <section class="content content-full content-boxed">
+          <!-- Section Content -->
+          <div class="push-20-t push-20 text-center">
+              <h3 class="h4 text-white-op push-20 visibility-hidden" data-toggle="appear">Do you have stories to say ? Sign up today and get started to write one!</h3>
+              <a class="btn btn-rounded btn-noborder btn-lg btn-success visibility-hidden" data-toggle="appear" data-class="animated bounceIn" href="blog_post.php">Write Post</a>
+          </div>
+          <!-- END Section Content -->
+      </section>
+  </div>
+  <!-- END Get Started -->';
+}
+?>
 
 <?php require 'inc/views/frontend_footer.php'; ?>
 <?php require 'inc/views/template_footer_start.php'; ?>
