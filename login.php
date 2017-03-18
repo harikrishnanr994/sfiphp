@@ -1,6 +1,7 @@
 <?php require 'inc/config.php'; ?>
 <?php require 'inc/views/template_head_start.php'; ?>
-<?php require 'inc/views/template_head_end.php';
+<?php require 'inc/views/template_head_end.php'; ?>
+<?php
 if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
   $_SESSION['msg'] = "Already logged in!";
   header("location: index.php");
