@@ -40,10 +40,7 @@
                               </a>
                         </li>
                         <li>
-                            <a class="font-w600" href="#"><i class="fa fa-facebook-square"></i>  Facebook</a>
-                        </li>
-                        <li>
-                            <a class="font-w600" href="#"><i class="fa fa-twitter-square"></i>  Twitter</a>
+                            <a class="font-w600" href="https://www.facebook.com/SfiNssceUnit/" target="_blank"><i class="fa fa-facebook-square"></i>  Facebook</a>
                         </li>
 
                     </ul>

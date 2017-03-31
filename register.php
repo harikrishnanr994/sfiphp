@@ -4,6 +4,10 @@
 <?php require 'inc/views/template_head_end.php';  ?>
 
 <?
+if(isset($_SESSION['admin']) && $_SESSION['admin']){
+  } else {
+    header("location: index.php");
+  }
 if(isset($_POST['submit'])) {
   $name = mysqli_real_escape_string($mysqli,$_POST['register-name']);
   $pwd = mysqli_real_escape_string($mysqli,$_POST['register-password']);

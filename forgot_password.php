@@ -30,7 +30,12 @@ if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
                               <div class="form-material form-material-primary floating">
                                   <div class="alert alert-danger alert-dismissable fade in" id="add_err">
                                       <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-                                      Wrong email !
+                                      <? if(isset($_SESSION['err']) && !empty($_SESSION['err'])) {
+                                          echo $_SESSION['err'];
+                                          unset($_SESSION['err']);
+                                      } else {
+                                          echo "Something Went Wrong.";
+                                      }?>
                                   </div>
                               </div>
                           </div>
@@ -81,7 +86,7 @@ $(document).ready(function(){
        url: "action_forgot.php",
       data: "username="+username,
        success: function(html){
-      if(html=='true')    {
+      if(html==true)    {
        $("#add_err").replaceWith('<div class="alert alert-success alert-dismissable fade in" id="add_err"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>A reset mail sussessfully sent to your email</div>');
       }
       else    {

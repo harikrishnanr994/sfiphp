@@ -102,10 +102,17 @@ $one->l_side_scroll             = true;
                                     </span>
                                 </div>
                                 <hr>
-                                <form class="form-inline" action="frontend_ecom_product.php" method="post" onsubmit="return false;">
-                                    <button type="submit" class="btn btn-sm btn-primary pull-right"><i class="fa fa-plus push-5-r"></i> Order now</button>
+                                <form class="form-inline pull-left" action="" method="post" autocomplete="off">
+                                    <div class="form-group" id="fieldPwd">
+                                        <div class="col-xs-12">
+                                            <div class="form-material form-material-primary floating">
+                                                <input class="form-control" type="password" id="password" name="password" required>
+                                                <label for="login-password">Password</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button id="forPwd" type="button" class="btn btn-sm btn-primary pull-right"><i class="fa fa-plus push-5-r"></i> Order now</button>
                                 </form>
-                                <hr>
                                 <?php echo $desc; ?>
                                 <!-- END Vital Info -->
                             </div>
@@ -292,6 +299,35 @@ $one->l_side_scroll             = true;
 <script src="<?php echo $one->assets_folder; ?>/js/plugins/magnific-popup/magnific-popup.min.js"></script>
 
 <!-- Page JS Code -->
+<script>
+$(document).ready(function(){
+  $("#fieldPwd").css('display', 'none', 'important');
+   $("#forPwd").click(function(){
+      username=$("#username").val();
+      password=$("#password").val();
+      $.ajax({
+       type: "POST",
+       url: "action_order.php",
+      data: "username="+username+"&password="+password,
+       success: function(html){
+      if(html=='true')    {
+       //$("#add_err").html("right username or password");
+       window.location="index.php";
+      }
+      else    {
+        $("#loader").replaceWith("<button class='btn btn-sm btn-block btn-primary' type='submit' id='login'>Log in</button>");
+        $("#add_err").css('display', 'inline', 'important');
+      }
+       },
+       beforeSend:function()
+       {
+      $("#login").replaceWith("<img id='loader' style='height:50px' src='assets/img/loading.gif'>");
+       }
+      });
+    return false;
+  });
+});
+</script>
 <script>
     jQuery(function(){
         // Init page helpers (Appear + Magnific Popup plugins)

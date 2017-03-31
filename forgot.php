@@ -22,7 +22,7 @@
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <div class="form-material form-material-primary floating">
-                                    <input class="form-control" type="text" id="forgot-email" name="forgot_email" value="harikrishnanr994@gmail.com" disabled>
+                                    <input class="form-control" type="text" id="forgot-email" name="forgot_email">
                                     <label for="login-email">Enter Your Email</label>
                                 </div>
                             </div>

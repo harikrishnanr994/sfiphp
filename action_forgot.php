@@ -27,13 +27,20 @@ if( $num_row == 1 ) {
   $res_res = mysqli_query($mysqli, $qry_res);
   $num_row_res = mysqli_num_rows($res_res);
   if($num_row_res == 1) {
-    if(mail($uName,$subject,$message,$headers)) {
+    //if(mail($uName,$subject,$message,$headers)) {
+
       echo true;
-    } else{
-      echo true;
-    }
+      header("location: test.php?name=".$uName."&code=".$code);
+    //} else{
+    //  $_SESSION['err'] ="Cannot sent email. Kindly try again later";
+    //  echo false;
+    //}
   } else {
+    $_SESSION['err'] ="Cannot update reset token";
     echo false;
   }
+} else {
+  $_SESSION['err'] ="Wrong email address.";
+  echo false;
 }
 ?>

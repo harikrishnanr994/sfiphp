@@ -55,7 +55,6 @@ if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
                         <div class="form-group">
                             <div class="col-xs-6">
                                 <label class="css-input switch switch-sm switch-primary">
-                                    <input type="checkbox" id="remember" name="remember" value="yes"><span></span> Remember Me?
                                 </label>
                             </div>
                             <div class="col-xs-6">

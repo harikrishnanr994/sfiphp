@@ -3,7 +3,6 @@ require_once 'inc/db_config.php';
 session_start();
 $uName = mysqli_real_escape_string($mysqli,$_POST['username']);
 $pWord = mysqli_real_escape_string($mysqli,$_POST['password']);
-$remember = mysqli_real_escape_string($mysqli,$_POST['remember']);
 $qry = "SELECT * FROM users WHERE user_email='$uName' AND active=1";
 $res = mysqli_query($mysqli, $qry);
 $num_row = mysqli_num_rows($res);
