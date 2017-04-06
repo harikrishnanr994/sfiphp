@@ -15,6 +15,8 @@
    $htm = '<li><a href="login.php">Login</a>
    </li>';
  }
+
+ $page_t = pathinfo($_SERVER['REQUEST_URI'])['filename'];
 ?>
 
 <!-- Header -->
@@ -40,21 +42,21 @@
                     <i class="fa fa-times"></i>
                 </button>
             </li>
-            <li><a <?php echo ($page_t == 'index') ? "class='active'" : ""; ?> href="index.php">Home</a>
+            <li><a <?php echo ($page_t == 'index' or $page_t == 'sfiphp') ? "class='active'" : ""; ?> href="index.php">Home</a>
                     </li>
-                    <li><a <?php echo ($page_t == 'services') ? "class='nav-submenu active'" : "class='nav-submenu'"; ?> href="#">Services</a>
+                    <li><a <?php echo ($page_t == 'library' or $page_t == 'bloodbank' or $page_t == 'news' or $page_t == 'book') ? "class='nav-submenu active'" : "class='nav-submenu'"; ?> href="#">Services</a>
                         <ul>
-                            <li><a <?php echo ($sub_page == 'library') ? "class='active'" : ""; ?> href="library.php">Library</a>
+                            <li><a <?php echo ($page_t == 'library' or $page_t == 'book') ? "class='active'" : ""; ?> href="library.php">Library</a>
                             </li>
-                            <li><a <?php echo ($sub_page == 'bloodbank') ? "class='active'" : ""; ?> href="#">Blood Bank</a>
+                            <li><a <?php echo ($page_t == 'bloodbank') ? "class='active'" : ""; ?> href="#">Blood Bank</a>
                             </li>
-                            <li><a <?php echo ($sub_page == 'news') ? "class='active'" : ""; ?> href="#">News</a>
+                            <li><a <?php echo ($page_t == 'news') ? "class='active'" : ""; ?> href="#">News</a>
                             </li>
                         </ul>
                     </li>
                     <li><a <?php echo ($page_t == 'forum') ? "class='active'" : ""; ?> href="#">Forum</a>
                     </li>
-                    <li><a <?php echo ($page_t == 'blog') ? "class='active'" : ""; ?> href="blog.php">Blog</a>
+                    <li><a <?php echo ($page_t == 'blog' or $page_t == 'blog_post' or $page_t == 'blog_story') ? "class='active'" : ""; ?> href="blog.php">Blog</a>
                     </li>
                     <li><a <?php echo ($page_t == 'gallery') ? "class='active'" : ""; ?> href="gallery.php">Gallery</a>
                     </li>

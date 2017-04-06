@@ -12,6 +12,30 @@ echo "Oct 3,1975 was on a ".date("l", mktime(0,0,0,10,3,1975)) . "<br>";
 
 // Use a constant in the format parameter
 echo date(DATE_RFC822) . "<br>";
+echo "<br/><br/>";
+
+echo basename($_SERVER['PHP_SELF']);
+echo "<br/><br/>";
+$uri = $_SERVER['REQUEST_URI'];
+echo $uri; // Outputs: URI
+echo "<br/><br/>";
+
+echo pathinfo($_SERVER['REQUEST_URI'])['filename'];
+
+//echo $path_parts['filename'], "\n"; 
+
+
+echo "<br/><br/>";
+ 
+$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+ 
+$url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+echo $url; // Outputs: Full URL
+echo "<br/><br/>";
+ 
+$query = $_SERVER['QUERY_STRING'];
+echo $query; // Outputs: Query String
+echo "<br/><br/>";
 
 // prints something like: 1975-10-03T00:00:00+00:00
 echo date(DATE_ATOM,mktime(0,0,0,10,3,1975));

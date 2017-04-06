@@ -1,5 +1,4 @@
 <?php require 'inc/config.php'; require 'inc/frontend_config.php'; require 'inc/db_config.php';
-$page_t = "blog";
 mysqli_set_charset($mysqli, 'utf8');
 $post_id = $_GET['id'];
 $post_detail_sql = mysqli_query($mysqli, "Select post_text from blog_post_details where post_id ='$post_id' LIMIT 1");

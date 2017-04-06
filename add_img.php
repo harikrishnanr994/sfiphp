@@ -1,5 +1,4 @@
 <?php require 'inc/config.php'; require 'inc/frontend_config.php'; require 'inc/db_config.php';
-$page_t = "Gallery";
 mysqli_set_charset($mysqli, 'utf8');
 $action = "insert";?>
 <?php require 'inc/views/template_head_start.php'; ?>
